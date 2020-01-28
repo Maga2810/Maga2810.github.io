@@ -1,0 +1,79 @@
+<ul class="nav navbar-nav">
+  <span id="hui" style="font-size:39px;cursor:pointer; color: white; padding-left: 11px;" onclick="openBurger()">&#9776;</span>
+  <div id="myBurger" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeBurger()">&times;</a>
+    <a href="#" onclick="openUs()">Кто мы</a>
+    <div id="navBio" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeUs()">&times;</a>
+    <div class="overlay-content">
+      <h2 style="color: white; text-align: center;">Наша Команда</h2>
+      <div class="row">
+
+        <div class="column">
+          <div class="card">
+            <img src="/static/first_app/images/osman1.jpg" alt="os" style="width:460px;">
+            <div class="container-b">
+              <h2>Осман</h2>
+              <p class="title">Исполнительный Директор и Основатель</p>
+              <p>"Любовь к автомобилям и прибыли привела меня к Вам!"</p>
+              <p>example@example.com</p>
+              <p><button class="button">Связаться</button></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/static/first_app/images/harald.png" alt="stas" style="width:460px">
+            <div class="container-b">
+              <h2>Станислав</h2>
+              <p class="title">Менеджер и Управляющий Логистикой</p>
+              <p>"Отправлю любой груз в любую точку мира!"</p>
+              <p>example@example.com</p>
+              <p><button class="button">Связаться</button></p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+    <a href="#" id="openContacts"> Наши Контакты</a>
+    <a href="#">Наши услуги</a>
+    <a href="#">Гараж</a>
+    <a href="#">Лицензии / Разрешения</a>
+  </div>
+</ul>
+                          <!-- CONTACTS WHITE MODAL -->
+<div class="modal fade" id="showCont" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content" style="background-color: black;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">С нами всегда можно связаться следующими путями:</h3>
+      </div>
+      <div class="modal-body" id="showCont">
+        <p><a href="#">
+        <span class="glyphicon glyphicon-home"></span>
+        </a>адрес: 1308 Factory Pl, Los Angeles, CA, 90013</p>
+
+        <p><a href="#">
+        <span class="glyphicon glyphicon-phone"></span>
+        </a>телефон: (888) 888-8888</p>
+
+        <p><a href="#">
+        <span class="glyphicon glyphicon-phone-alt"></span>
+        </a>факс: (333) 333-3333</p>
+
+        <p><a href="#">
+        <span class="glyphicon glyphicon-envelope"></span>
+        </a>почта: oscar-export@gmail.com</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>

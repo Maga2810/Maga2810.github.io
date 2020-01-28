@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADMIN</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="static/first_app/css/main.css">
+	<link rel="stylesheet" type="text/css" href="static/first_app/css/admin.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+	<script src="static/first_app/js/faradenza.js"></script>
+</head>
+<body>
+{% include "first_app/hat.html" %}
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border: none; background-color:rgba(0, 0, 0, 0.4); margin-bottom: 0%;">
+  <div class="container-fluid">
+    {% include "first_app/navigation.html" %}
+	    <!-- <h1 style="font-size: 23px; width: 600px;">{{user.partner.alias}}, добро пожаловать в личный кабинет!</h1> -->
+	    {% include "first_app/exiticon.html" %}
+	</div>
+</nav>
+<div class="container-fluid" style="width: 100%;">
+	<div class="row">
+		<div class="col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+			<h1 style="background-color: black">Все заказы: </h1>
+			<table style="margin-bottom: 0px;" class="table table-striped">
+				<thead class="thead-dark">
+					<tr style="background-color: black;">
+						<th width="72px">#</th>
+						<th>Дата заказа</th>
+						<th>Заказчик</th>
+						<th>Название</th>
+						<th>Категория</th>
+						<th width="72px">Кол.во</th>
+						<th width="60px">Год</th>
+						<th width="90px">Бренд</th>
+						<th width="95px">Модель</th>
+						<th>Номер</th>
+						<th>Ссылка</th>
+						<th>Отправка</th>
+						<th>Пометки</th>
+						<th width="90px"></th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					{% for o in all_orders %}
+					<tr style="width: 100%; height: auto;">
+						<td class="count"></td>
+						<td>{{o.created_at}}</td>
+						<td><a href="partner/{{o.partner.user_id}}">{{o.partner.alias}}</a></td>
+						<td>{{o.title}}</td>
+						<td>{{o.category}}</td>
+						<td>{{o.quantity}}</td>
+						<td>{{o.year}}</td>
+						<td>{{o.brand}}</td>
+						<td>{{o.model}}</td>
+						<td><div>{{o.serial}}</div></td>
+						<td><div><a href="{{o.link}}">{{o.link}}</a></div></td>
+						<td>{{o.location}}</td>
+						<td><div>{{o.notes}}</div></td>
+						<td><a href="/delete_order_by_superuser/{{o.id}}">Удалить</a></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+				
+			</table>
+
+		</div>
+	</div>
+</div>
+
+
+{% include "first_app/footer.html" %}
+
+</body>
+</html>

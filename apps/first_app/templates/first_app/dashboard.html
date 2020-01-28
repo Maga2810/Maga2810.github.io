@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="static/first_app/css/main.css">
+	<link rel="stylesheet" type="text/css" href="static/first_app/css/dashboard.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+	<script src="static/first_app/js/faradenza.js"></script>
+</head>
+<body>
+	{% include "first_app/hat.html" %}
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border: none; background-color: rgba(0, 0, 0, 0.4); margin-bottom: 0%;">
+  <div class="container-fluid">
+    {% include "first_app/navigation.html" %}
+	    <h1 style="font-size: 23px; width: 600px;">{{user.partner.alias}}, добро пожаловать в личный кабинет!</h1>
+	    {% include "first_app/exiticon.html" %}
+	</div>
+</nav>
+<div class="container" style="width: 100%; padding-left: 0px; padding-right: 0px;">
+	<div class="row" id="row">
+		<div class="col-sm-6" id="left-col">
+			<div class="order-form">
+				<form action="/make_order" method="post">
+					{% csrf_token %}
+					<h2>Оформите свой заказ:</h2>
+					<div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-tag"></i></span>
+              <input type="text" class="form-control-cus" name="title" placeholder="Наименование Товара" required="required">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+            	<span id="input-group-addon" class="input-group-addon"><i class="fa fa-list-alt"></i></span>
+            	<select class="selectpicker" name="category" required="required" style="background-color:rgb(0, 0, 0, 0.7);">
+	        			<option value=""disabled selected>Категория товара</option>
+	        			<option value="Автомобили">Автомобили</option>
+	        			<option value="Запчасти">Запчасти</option>
+	        			<option value="Мототехника">Мототехника</option>
+	        			<option value="Водный транспорт">Водный транспорт</option>
+	        			<option value="Другое">Другое</option>
+	      			</select>
+						</div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-plus"></i></span>
+              <input type="number" class="form-control-cus" name="quantity" placeholder="Количество" required="required" min="1">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-calendar"></i></span>
+              <input type="text" class="form-control-cus" name="year" placeholder="Год">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-shopping-cart"></i></span>
+              <input type="text" class="form-control-cus" name="brand" placeholder="Бренд">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-gift"></i></span>
+              <input type="text" class="form-control-cus" name="model" placeholder="Модель">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-barcode"></i></span>
+              <input type="text" class="form-control-cus" name="serial" placeholder="VIN/Серийный номер">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-paperclip"></i></span>
+              <input type="text" class="form-control-cus" name="link" placeholder="Ссылка">
+            </div>
+          </div>
+
+					<div class="form-group">
+            <div class="input-group">
+              <span id="input-group-addon" class="input-group-addon"><i class="fa fa-globe"></i></span>
+              <input type="text" class="form-control-cus" name="location" placeholder="Местоположение">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+							<textarea id="text1" wrap="hard" style="font-size: 17px; color: white" name="notes" placeholder="  Задайте нам любой вопрос!"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+          </div>
+				</form>
+			</div>
+		</div>
+
+		<div class="col-sm-6" id="right-col">
+			<div class="col-sm-12" id="upper_title">
+				<h1>Площадки выбора транспортных средств:</h1>	
+			</div>
+			<div class="col-sm-12" id="cars">
+				<div class="col-md-4">
+					<a href="https://www.cars.com/">
+					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/car_sites/cars.png"></a>
+					<a href="https://www.cargurus.com/">
+					<img class="img-icons" style="width: 85%" ; src="static/first_app/images/car_sites/cg.png"></a>
+					<a href="https://www.iaai.com/ru-ru/">
+					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/car_sites/iaai.png"></a>
+					<a href="https://www.manheim.com/">
+					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/car_sites/manheim.png"></a>
+        </div>
+
+        <div class="col-md-4">
+        	<a href="https://losangeles.craigslist.org/d/cars-trucks/search/cta">
+        	<img class="img-icons" style="width: 105%"; src="static/first_app/images/car_sites/craig.png"></a>
+        	<a href="http://www.opgla.com/auction/auction.aspx">
+					<img class="img-icons" style="width: 50%" ; src="static/first_app/images/car_sites/opg.png"></a>
+					<a href="https://www.govplanet.eu/">
+					<img class="img-icons" style="width: 100%" ; src="static/first_app/images/car_sites/gp.png"></a>
+					<a href="https://www.auctiontime.com/">
+					<img class="img-icons" style="width: 95%"; src="static/first_app/images/car_sites/time1.png"></a>
+				</div>
+
+				<div class="col-md-4">
+					<a href="https://www.copart.com/ru/">
+					<img class="img-icons" style="width: 90%"; src="static/first_app/images/car_sites/copart.png"></a>
+					<a href="https://www.crashedtoys.com/">
+					<img class="img-icons" style="width: 90%"; src="static/first_app/images/car_sites/ct1.png"></a>
+					<a href="https://www.richmondaa.com/">
+					<img class="img-icons" style="width: 60%"; src="static/first_app/images/car_sites/richmond.png"></a>
+					<a href="https://www.driveautoauctions.com/">
+					<img class="img-icons" style="width: 100%" ; src="static/first_app/images/car_sites/daa.png"></a>
+				</div>
+			</div>
+
+			<div class="col-sm-12" id="lower_title">
+				<h1>Площадки выбора запчастей:</h1>			
+			</div>
+			<div class="col-sm-12" id="parts">
+				<div class="col-md-4">
+					<a href="https://www.usautoparts.com/">
+					<img class="img-icons" style="width: 95%" ; src="static/first_app/images/parts_sites/us-auto.png"></a>
+        	<a href="https://www.ebay.com/b/Auto-Parts-Accessories/6028/bn_569479">
+					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/parts_sites/ebay.png"></a>
+					<a href="http://www.carid.com/auto-parts.html">
+					<img class="img-icons" style="width: 95%" ; src="static/first_app/images/parts_sites/carid.png"></a>
+        </div>
+        <div class="col-md-4">
+        	<a href="https://www.autozone.com">
+					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/parts_sites/autozone.png"></a>
+					<a href="http://www.car-part.com/">
+					<img class="img-icons" style="width: 100%" ; src="static/first_app/images/parts_sites/car-part.png"></a>
+        	<a href="https://www.rockauto.com/">
+					<img class="img-icons" style="width: 85%" ; src="static/first_app/images/parts_sites/rock.png"></a>
+        </div>
+        <div class="col-md-4">
+        	<a href="https://www.amazon.com/automotive-auto-truck-replacements-parts/b?ie=UTF8&node=15684181&tag=googhydr-20&hvadid=223646216809&hvpos=1t1&hvexid=&hvnetw=g&hvrand=9689631577562816335&hvpone=&hvptwo=&hvqmt=b&hvdev=c&ref=pd_sl_528uvf94mx_b&hvtargid=aud-649564993678:kwd-649787178421">
+					<img class="img-icons" style="width: 90%" ; src="static/first_app/images/parts_sites/amazon.png"></a>
+					<a href="https://www.usautoparts.com/">
+					<img class="img-icons" style="width: 95%" ; src="static/first_app/images/parts_sites/oreilly1.png"></a>
+        	<a href="https://losangeles.craigslist.org/d/auto-parts/search/pta">
+        	<img class="img-icons" style="width: 110%"; src="static/first_app/images/parts_sites/craig.png"></a>
+        </div>
+			</div>	
+
+		</div>
+	</div>
+</div>
+
+<div class="container" style="width: 100%;">
+	<div class="row">
+		<div class="col-sm-12" style="padding-left: 0px; padding-right: 0px;">
+			<h1 style="background-color: black">Мои заказы: </h1>
+			<table style="margin-bottom: 0px;" class="table table-striped">
+				<thead class="thead-dark">
+					<tr style="background-color: black;">
+						<th>Название</th>
+						<th>Категория</th>
+						<th width="72px">Кол.во</th>
+						<th width="60px">Год</th>
+						<th width="90px">Бренд</th>
+						<th width="95px">Модель</th>
+						<th>Номер</th>
+						<th>Ссылка</th>
+						<th>Отправка</th>
+						<th>Пометки</th>
+						<th width="90px"></th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					{% for o in my_orders %}
+					<tr style="width: 100%; height: auto;">
+						<td>{{o.title}}</td>
+						<td>{{o.category}}</td>
+						<td>{{o.quantity}}</td>
+						<td>{{o.year}}</td>
+						<td>{{o.brand}}</td>
+						<td>{{o.model}}</td>
+						<td><div>{{o.serial}}</div></td>
+						<td><div><a href="{{o.link}}">{{o.link}}</a></div></td>
+						<td>{{o.location}}</td>
+						<td><div>{{o.notes}}</div></td>
+						<td><a href="/delete_order/{{o.id}}">Удалить</a></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+				
+			</table>
+		</div>
+	</div>
+</div>
+{% include "first_app/countries.html" %}                 
+{% include "first_app/footer.html" %}
+</body>
+</html>

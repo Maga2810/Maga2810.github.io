@@ -1,0 +1,107 @@
+#modal-reg {
+  display: contents;
+}
+
+.form-control, .btn {
+  border-radius: 3px;
+}
+.login-form {
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 37%;
+}
+
+.login-form form {
+  color: white;
+  border-radius: 15px;
+  background-image: url("/static/first_app/images/noir/noir12.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+  padding: 25px;
+}
+.login-form h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: century gothic;
+  margin-top: 3px;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+.login-form p {
+  font-size: 17px;
+  font-family: century gothic;
+  padding-left: 10px;
+}
+.login-form .form-group {
+  margin-bottom: 40px;
+}
+
+.login-form .input-group-addon {
+  max-width: 100px;
+  text-align: center;
+}
+  
+.login-form .btn{        
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(247,110,4);
+  background: linear-gradient(90deg, rgba(247,110,4,0.7) 0%, rgba(250,5,18,0.9) 50%, rgba(255,51,120,0.6) 100%);
+  border: none;
+  border-radius: 18px;
+  min-width: 140px;
+}
+.login-form .btn:hover, .login-form .btn:focus {
+  background: #ff4c00;
+  outline: none;
+}
+.login-form a {
+  color: #fff;  
+  text-decoration: underline;
+}
+.login-form a:hover {
+  text-decoration: none;
+}
+.login-form form a {
+  color: #19aa8d;
+  text-decoration: none;
+} 
+.login-form form a:hover {
+  text-decoration: underline;
+}
+.login-form .fa {
+  font-size: 20px;
+  color: white;
+}
+
+.form-control-cust {
+  display: block;
+  width: 95%;
+  height: 40px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: white;
+  background-color: white;
+  background-image: none;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  padding-left: 5px;
+}
+/*#b8b8b8;*/
+::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+#login-group-addon {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+}

@@ -1,0 +1,43 @@
+footer {
+  padding: 35px;
+}
+.scl-btn {
+  padding: 15px;
+  font-size: 25px;
+  width: 55px;
+  text-align: center;
+  text-decoration: none;
+  margin:5px;
+  color: white;
+}
+.scl-btn:hover {
+  opacity: 0.5;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+/* Round buttons */
+.scl-crcl {
+  border-radius: 50%;
+}
+.fa-vk { background: #4a76a8; }
+.fa-facebook-f { background: #3B5998; }
+.fa-twitter { background: #55ACEE; }
+.fa-whatsapp { background: #25D366; }
+.fa-google { background: #dd4b39; }
+.fa-youtube { background: #bb0000; }
+.fa-instagram { background: #125688; }
+.fa-skype { background: #00aff0; }
+.fa-facebook-messenger { background: #3b5998; }
+.fa-telegram-plane { background: #0088cc; }
+
+.row-social {
+  margin-top: 40px;
+  text-align: center;
+}
+.text {
+  background-image: url("/static/first_app/images/tonnel1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+}

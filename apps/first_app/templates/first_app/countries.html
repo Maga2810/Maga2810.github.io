@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COUNTRIES</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
+  <script src="static/first_app/js/faradenza.js"></script>
+</head>
+<body>
+                            <!-- COUNTRIES FONT -->
+<div class="container title-container" style="width: 100%">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Выберите страну, и узнайте всю информацию по пересылке туда любых грузов:</h1>
+    </div>
+  </div>
+</div>                    
+							             <!-- COUNTRIES FONT END-->
+                          	<!-- COUNTRIES ICONS -->
+<div class="container-fluid" style="width: 100%; background-color: black;">
+  <div class="row" style="margin-top: 25px; margin-bottom: 25px;">
+      <!-- 1st COLUMN -->
+      <div class="col-xs-4">
+<!-- RUSSIA -->
+        <img class="img-responsive-f" src="static/first_app/images/flags/russia-flag-3d.png" title="Россия">
+
+<!-- RUSSIA END -->
+<!-- BELARUS -->
+        <img class="img-responsive-f" src="static/first_app/images/flags/belarus-flag-3d.png" title="Беларусь">
+<!-- BELARUS END-->
+<!-- AZERBAIJAN -->
+        <img class="img-responsive-f" src="static/first_app/images/flags/azerbaijan-flag-3d.png" title="Азербайджан">
+<!-- AZERBAIJAN END -->
+      </div>                  <!-- END OF 1ST COLUMN -->
+      <!-- 2ND COLUMN -->
+      <div class="col-xs-4">  
+<!-- UKRAINE -->
+        <img class="img-responsive-f" src="static/first_app/images/flags/ukraine-flag-3d.png" title="Украина"> 
+<!-- UKRAINE END --> 
+<!-- GEORGIA -->
+        <img class="img-responsive-f" src="static/first_app/images/flags/georgia-flag-3d.png" title="Грузия"> 
+<!-- GEORGIA END -->
+<!-- UZBEKISTAN -->
+        <img class="img-responsive-f" src="static/first_app/images/flags/uzbekistan-flag-3d.png" title="Узбекистан"> 
+<!-- UZBEKISTAN END -->
+      </div>                  <!-- END OF 2ND COLUMN -->
+      <!-- 3RD COLUMN -->
+      <div class="col-xs-4"> 
+<!-- KAZAKHSTAN -->
+      <img class="img-responsive-f" id="kazModal" src="static/first_app/images/flags/kazah-flag-3d.png "title="Казахстан">
+          <div class="modal fade" id="kaModal" role="dialog">
+            <div class="modal-dialog" style="width: 70%; margin-top: 55px;">
+              <div class="modal-content" style="background-image: url(static/first_app/images/flags/kazah3.jpg); background-repeat: no-repeat; background-position: top; background-size: 101%">
+
+                <div class="modal-header">
+                  <button type="button" style="font-size: 50px;" class="close" data-dismiss="modal">&times;</button>
+                  <h1 class="modal-title" style="color: white">Казахстан</h1>
+                </div>
+
+                <div class="modal-body">
+                  <h3>Что выгодней всего вести в Казахстан?</h3>
+                  <p>1. Авто младше 5 лет</p>
+                  <p>2. Авто которых в Казахстане нет</p>
+                  <p>3. Авто, на которое бюджет выше 10000$</p>
+                </div>
+                
+                <div class="modal-body">
+                  <h3>Сколько будет стоить растарможка транспортного средства в Казахстане?</h3>
+                  <p><a href="http://kgd.gov.kz/ru/calc/customsAutomobilePayments">Вы можете высчитать это на официальном государственном сайте</a></p>
+                </div>
+                
+                <div class="modal-body" style="background-image: url(static/first_app/images/noir/cart.jpg); background-repeat: no-repeat; background-size: 101%; background-position: center;">
+                  <h3>Какие услуги мы предоставляем?</h3>
+                  <p>Покупка автомобиля из частных рук $450</p>
+                  <p>Покупка автомобиля у официального дилера $700</p>
+                  <p>Покупка автомобиля с аукциона $1000</p>
+                  <p>При покупке автомобиля с аукциона, подбор запчастей  $300+</p>
+                  <p>Физический осмотр автомобиля на аукционе за выезд $200+</p>
+                  <p>Покупка мотоцикла\снегохода\и прочей мелкой техники $500+</p>
+                  <p>Запчасти от дилера $75+</p>
+                  <p>Запчасти от авторазборок $75+</p>
+                  <p>Комплект передней или задней части от авторазборок $200+</p>
+                  <p>За каждый автомобиль оплата порту за административную работу  $300+</p>
+                  <p>За мото технику  $200+</p>
+                  <p>Отправка легкового автомобиля из порта в город Алматы в среднем обходится в $3100 - $3300</p>
+                </div>
+                            <!-- CARS & PARTS ICONS/LINKS  -->
+                {% include "first_app/cars&parts.html" %}
+                <div class="modal-body" style="background-color: black">
+                  <h3 style="text-align: center;">Анкета:</h3>
+                  {% include "first_app/form.html" %}
+                </div>
+                <div class="modal-footer" style="background-color: black">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+
+              </div>
+            </div>
+          </div> 
+<!-- KAZAKHSTAN END -->
+<!-- MOLDOVA -->
+        <img class="img-responsive-f" id="" src="static/first_app/images/flags/moldova-flag-3d.png" title="Молдова">
+<!-- MOLDOVA END -->
+<!-- ARMENIA -->
+        <img class="img-responsive-f" id="" src="static/first_app/images/flags/armenia-flag-3d.png" title="Армения">
+<!-- ARMENIA END -->
+      </div>                  <!-- END OF 3RD COLUMN -->
+  </div>
+</div><!-- container end -->
+</body>
+</html>

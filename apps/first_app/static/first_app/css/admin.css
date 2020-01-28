@@ -1,0 +1,51 @@
+.navbar .container-fluid > h1 {
+	color: white;
+	font-size: 23px;
+	float: left;
+	margin-left: 31px;
+}
+
+.col-xs-12 > h1 {
+	font-size: 38px;
+	padding-left: 0px; 
+	padding-right: 0px;
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+table {
+	table-layout: fixed;
+	width: 100px;
+	counter-reset: section;
+}
+.count:before {
+  counter-increment: section;
+  content: counter(section);
+  color: black;
+}
+
+td div { 
+	background-color: auto;
+	width: auto;
+	height: 100px;
+	overflow: auto;
+	overflow-x: hidden; 
+}
+		/*table hat*/
+table thead tr th {
+	text-align: center;
+	color: #a8a8a8;
+	font-size: 17px;
+}
+table tbody tr td {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+}

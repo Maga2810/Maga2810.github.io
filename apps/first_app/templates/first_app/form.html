@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="static/first_app/css/form.css">
+</head>
+<body>
+	<div class="customer-form">
+	  <form action="#" method="post">
+	    {% csrf_token %}
+	    <div class="form-group">
+        <div class="input-group">
+          <span id="input-group-addon" class="input-group-addon"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control-cus" name="alias" placeholder="Ваше имя" required="required" style="background-color:rgb(0, 0, 0, 0.4);">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span id="input-group-addon" class="input-group-addon"><i class="fa fa-envelope"></i></span>
+          <input type="email" class="form-control-cus" name="email" placeholder="Електронная почта" required="required" style="background-color:rgb(0, 0, 0, 0.4);">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span id="input-group-addon" class="input-group-addon"><i class="fa fa-phone"></i></span>
+          <input type="text" class="form-control-cus" name="phone" placeholder="Номер телефона" required="required" style="background-color:rgb(0, 0, 0, 0.4);">
+        </div>
+      </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-tag"></i></span>
+	        <input type="text" class="form-control-cus" name="title" placeholder="Наименование Товара" required="required">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-list-alt"></i></span>
+	        <select class="selectpicker" name="category" required="required" style="background-color:rgb(0, 0, 0, 0.7);">
+	          <option value=""disabled selected>Категория товара</option>
+	          <option value="Автомобили">Автомобили</option>
+	          <option value="Запчасти">Запчасти</option>
+	          <option value="Мототехника">Мототехника</option>
+	          <option value="Водный транспорт">Водный транспорт</option>
+	          <option value="Другое">Другое</option>
+	        </select>
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-plus"></i></span>
+	        <input type="number" class="form-control-cus" name="quantity" placeholder="Количество" required="required" min="1">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-calendar"></i></span>
+	        <input type="text" class="form-control-cus" name="year" placeholder="Год">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-shopping-cart"></i></span>
+	        <input type="text" class="form-control-cus" name="brand" placeholder="Бренд">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-gift"></i></span>
+	        <input type="text" class="form-control-cus" name="model" placeholder="Модель">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-barcode"></i></span>
+	        <input type="text" class="form-control-cus" name="serial" placeholder="VIN/Серийный номер">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-paperclip"></i></span>
+	        <input type="text" class="form-control-cus" name="link" placeholder="Ссылка">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <span id="input-group-addon" class="input-group-addon"><i class="fa fa-globe"></i></span>
+	        <input type="text" class="form-control-cus" name="location" placeholder="Местоположение">
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <div class="input-group">
+	        <textarea id="text2" wrap="hard" style="font-size: 17px; color: white" name="notes" placeholder="  Задайте нам любой вопрос!"></textarea>
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+	    </div>
+	  </form>
+
+	</div>
+</body>
+</html>
