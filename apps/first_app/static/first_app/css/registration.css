@@ -1,17 +1,20 @@
 #modal-reg {
   display: contents;
 }
-.form-control, .form-control:focus, .input-group-addon {
-  border-color: red;
-}
-.form-control, .btn {
-  border-radius: 3px;
-}
 .signup-form {
   width: 420px;
   margin: 0 auto;
   margin-top: 27%;
 }
+                          /*CELL PHONES*/
+@media screen and (max-width: 600px) {
+  .signup-form {
+    width: 95%;
+    margin: auto auto;
+    margin-top: 32%;
+  }
+}
+
 .signup-form form {
   color: white;
   border-radius: 15px;
@@ -21,6 +24,11 @@
   background-size: cover;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
   padding: 30px;
+}
+@media screen and (max-width: 600px) {
+  .signup-form form {
+    padding: 18px;
+  }
 }
 .signup-form h2 {
   color: white;
@@ -121,7 +129,7 @@
   font-weight: 400;
   line-height: 1;
   text-align: center;
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0, 0.6) !important;
   border: none;
   border-radius: 40px 0px 0px 40px;
 }

@@ -41,3 +41,21 @@ footer {
   background-size: cover;
   height: 250px;
 }
+                 /*CELL PHONE*/
+@media screen and (max-width: 600px) {
+  .row-social {
+    margin-top: 20px;
+  }
+  .scl-btn {
+    padding: 10px;
+    font-size: 26px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 6px;
+    color: white;
+  }
+  .text {
+    height: 220px;
+  }
+}

@@ -2,14 +2,19 @@
   display: contents;
 }
 
-.form-control, .btn {
-  border-radius: 3px;
-}
 .login-form {
   width: 90%;
   height: 200px;
   margin: 0 auto;
   margin-top: 37%;
+}
+                          /*CELL PHONES*/
+@media screen and (max-width: 600px) {
+  .login-form {
+    height: 100%;
+    margin: auto auto;
+    margin-top: 34%;
+  }
 }
 
 .login-form form {
@@ -21,6 +26,7 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
   padding: 25px;
 }
+
 .login-form h2 {
   color: white;
   font-size: 36px;
@@ -75,6 +81,8 @@
 .login-form .fa {
   font-size: 20px;
   color: white;
+  padding-left: 1px;
+  text-align: center;
 }
 
 .form-control-cust {
@@ -90,7 +98,13 @@
   border-radius: 0px 20px 20px 0px;
   padding-left: 5px;
 }
-/*#b8b8b8;*/
+                          /*CELL PHONES*/
+@media screen and (max-width: 600px) {
+  .form-control-cust {
+    width: 100%;
+    padding-left: 8px;
+  }
+}
 ::placeholder {
   color: white;
   opacity: 0.7;

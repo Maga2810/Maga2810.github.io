@@ -1,0 +1,83 @@
+#kaModal .modal-dialog {
+	width: 60%;
+	margin-top: 55px;
+}
+.modal-content {
+	border: none !important;
+	background-color: transparent !important;
+}
+.top-content {
+	background-repeat: no-repeat;
+	background-position: top; 
+	background-size: auto;
+}
+.center {
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  #kaModal .modal-dialog {
+		width: 90%;
+    padding: 20px 5px;
+    margin: auto auto;
+	}
+	.modal-header {
+    padding: 6px !important;
+    border-bottom: 1px solid #e5e5e5;
+	}
+	.top-content {
+		background-size: auto;
+		background-size: cover;
+	}
+}
+
+          /*Country Modal Text*/
+.modal-content h1 {
+  font-family: century gothic;
+  font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 38px;
+}
+.modal-content h3 {
+  font-family: century gothic;
+  font-style: italic;
+  font-size: 27px;
+  color: white;
+  margin-top: 0px !important;
+}
+.modal-content p {
+  font-family: century gothic;
+  font-size: 18px;
+  color: white;
+  text-align: left;
+}
+.btn {
+	font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(106, 90, 205);
+  border: 1px;
+  border-radius: 15px !important;
+  font-size: 18px !important;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.modal-content h1 {
+		font-size: 30px;
+	}
+	.modal-content h3 {
+		font-size: 18px;
+	}
+	.modal-content p {
+		font-size: 13px;
+
+	}
+	.col-xs-4 {
+		padding-right: 0px !important;
+    padding-left: 0px !important;
+	}
+}

@@ -24,6 +24,8 @@
 @media screen and (max-width: 1024px) {
   #top > h1 {
     font-size: 70px;
+    padding-top: 22px;
+    text-align: center;
   }
 }
 
@@ -239,13 +241,33 @@ html {
   margin-top: 60px;
 }
                 /*BIO ENDS*/
-/*CAROUSEL*/
-.img-responsive {
-  /*width: 100%;*/
-  /*background-size: contain;*/
+                /*CAROUSEL*/
+.carousel-inner h3 {
+  font-size: 80px;
+  font-family: Times New Roman, Times, serif;
+  font-style: italic;
+  text-shadow: 2px 1px black;
+  border-bottom: 1px solid black;
+
+}
+.carousel-inner p {
+  font-size: 22px;
+  font-family: century gothic;
+  color: white;
+}
+                /*CELL PHONE*/
+@media screen and (max-width: 600px) {
+  
+  .carousel-inner h3 {
+    font-size: 24px;
+    /*border-bottom: 1px solid black;*/
+  }
+  .carousel-inner p {
+    font-size: 12px;
+  }
 }
 
-/*CAROUSEL END*/
+              /*CAROUSEL END*/
 .mycontainer {
   margin-top: 0px;
   padding-right: 0px !important;
@@ -254,20 +276,36 @@ html {
   margin-left: auto !important;
 }
 .img-responsive-f {
-  width: 50%;
+  width: 55%;
   cursor: pointer;
   transition: 0.3s;
-  padding: 13px;
+  padding: 25px;
+}
+.container-fluid .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.col-xs-4 {
+  text-align: center;
 }
 .img-responsive-f:hover {
   opacity: 0.5;
+}
+        /*CELL PHONE*/  
+@media screen and (max-width: 600px) {
+  .img-responsive-f {
+    width: 80%;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 4px;
+  }
 }
                     /*COUNTRIES TITLE*/
 .title-container {
   background-color: black;
 }
 .title-container h1 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 500;
   padding-left: 25px;
   padding-right: 25px;
@@ -281,23 +319,4 @@ html {
   .title-container h1 {
     font-size: 20px;
   }
-}
-          /*Country Modal Text*/
-.modal-content h1 {
-  font-family: century gothic;
-  font-style: italic;
-  text-align: center;
-  text-decoration: underline;
-  font-size: 38px;
-}
-.modal-content h3 {
-  font-family: century gothic;
-  font-style: italic;
-  font-size: 27px;
-  color: white;
-}
-.modal-content p {
-  font-family: century gothic;
-  font-size: 18px;
-  color: white;
 }

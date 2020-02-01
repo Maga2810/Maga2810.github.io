@@ -4,6 +4,7 @@
 	<title>COUNTRIES</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="static/first_app/css/countries.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -57,49 +58,51 @@
 <!-- KAZAKHSTAN -->
       <img class="img-responsive-f" id="kazModal" src="static/first_app/images/flags/kazah-flag-3d.png "title="Казахстан">
           <div class="modal fade" id="kaModal" role="dialog">
-            <div class="modal-dialog" style="width: 70%; margin-top: 55px;">
-              <div class="modal-content" style="background-image: url(static/first_app/images/flags/kazah3.jpg); background-repeat: no-repeat; background-position: top; background-size: 101%">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="top-content" style="background-image: url(static/first_app/images/flags/kazah3.jpg);">
+                  <div class="modal-header">
+                    <button type="button" style="font-size: 50px;" class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="modal-title" style="color: white">Казахстан</h1>
+                  </div>
 
-                <div class="modal-header">
-                  <button type="button" style="font-size: 50px;" class="close" data-dismiss="modal">&times;</button>
-                  <h1 class="modal-title" style="color: white">Казахстан</h1>
+                  <div class="modal-body">
+                    <h3>Что выгодней всего вести в Казахстан?</h3>
+                    <p>1. Авто младше 5 лет</p>
+                    <p>2. Авто которых в Казахстане нет</p>
+                    <p>3. Авто, на которое бюджет выше 10000$</p>
+                  </div>
+                  
+                  <div class="modal-body">
+                    <h3>Сколько будет стоить растарможка транспортного средства в Казахстане?</h3>
+                    <p><a style="color: yellow; text-decoration: underline;" href="http://kgd.gov.kz/ru/calc/customsAutomobilePayments">Вы можете высчитать это на официальном государственном сайте</a></p>
+                  </div>
                 </div>
-
-                <div class="modal-body">
-                  <h3>Что выгодней всего вести в Казахстан?</h3>
-                  <p>1. Авто младше 5 лет</p>
-                  <p>2. Авто которых в Казахстане нет</p>
-                  <p>3. Авто, на которое бюджет выше 10000$</p>
-                </div>
-                
-                <div class="modal-body">
-                  <h3>Сколько будет стоить растарможка транспортного средства в Казахстане?</h3>
-                  <p><a href="http://kgd.gov.kz/ru/calc/customsAutomobilePayments">Вы можете высчитать это на официальном государственном сайте</a></p>
-                </div>
-                
-                <div class="modal-body" style="background-image: url(static/first_app/images/noir/cart.jpg); background-repeat: no-repeat; background-size: 101%; background-position: center;">
-                  <h3>Какие услуги мы предоставляем?</h3>
-                  <p>Покупка автомобиля из частных рук $450</p>
-                  <p>Покупка автомобиля у официального дилера $700</p>
-                  <p>Покупка автомобиля с аукциона $1000</p>
-                  <p>При покупке автомобиля с аукциона, подбор запчастей  $300+</p>
-                  <p>Физический осмотр автомобиля на аукционе за выезд $200+</p>
-                  <p>Покупка мотоцикла\снегохода\и прочей мелкой техники $500+</p>
-                  <p>Запчасти от дилера $75+</p>
-                  <p>Запчасти от авторазборок $75+</p>
-                  <p>Комплект передней или задней части от авторазборок $200+</p>
-                  <p>За каждый автомобиль оплата порту за административную работу  $300+</p>
-                  <p>За мото технику  $200+</p>
-                  <p>Отправка легкового автомобиля из порта в город Алматы в среднем обходится в $3100 - $3300</p>
+                <div class="center" style="background-image: url(static/first_app/images/noir/cart1.jfif);">
+                  <div class="modal-body">
+                    <h3>Какие услуги мы предоставляем?</h3>
+                    <p>Покупка автомобиля из частных рук $450</p>
+                    <p>Покупка автомобиля у официального дилера $700</p>
+                    <p>Покупка автомобиля с аукциона $1000</p>
+                    <p>При покупке автомобиля с аукциона, подбор запчастей  $300+</p>
+                    <p>Физический осмотр автомобиля на аукционе за выезд $200+</p>
+                    <p>Покупка мотоцикла\снегохода\и прочей мелкой техники $500+</p>
+                    <p>Запчасти от дилера $75+</p>
+                    <p>Запчасти от авторазборок $75+</p>
+                    <p>Комплект передней или задней части от авторазборок $200+</p>
+                    <p>За каждый автомобиль оплата порту за административную работу  $300+</p>
+                    <p>За мото технику  $200+</p>
+                    <p>Отправка легкового автомобиля из порта в город Алматы в среднем обходится в $3100 - $3300</p>
+                  </div>
                 </div>
                             <!-- CARS & PARTS ICONS/LINKS  -->
                 {% include "first_app/cars&parts.html" %}
-                <div class="modal-body" style="background-color: black">
+                <div class="modal-body" style="padding: 0px; background-color: rgba(0, 0, 0, 0.9);">
                   <h3 style="text-align: center;">Анкета:</h3>
                   {% include "first_app/form.html" %}
                 </div>
-                <div class="modal-footer" style="background-color: black">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <div class="modal-footer" style="background-color: rgba(0, 0, 0, 0.8); border: none;">
+                  <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
                 </div>
 
               </div>

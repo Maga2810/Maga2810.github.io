@@ -1,3 +1,4 @@
+
 .img-icons {
   cursor: pointer;
   transition: 0.3s;
@@ -28,6 +29,18 @@
   background-size: cover;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
   padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .customer-form form {
+    border-radius: 13px;
+    padding: 8px;
+    height: 745px;
+  }
+  .customer-form {
+    width: 100%;
+    margin: auto;
+    margin-top: 1%;
+  }
 }
 .customer-form h2 {
 	color: white;
@@ -71,7 +84,7 @@
   border-radius: 17px;
   width: 200px;
   left: 40%;
-  position: absolute;
+  text-align: center;
 }
 .customer-form .btn:hover, .signup-form .btn:focus {
   background: #ef1b75;
@@ -122,6 +135,11 @@ textarea::placeholder {
 	font-size: 16px;
   color: white;
 }
+@media screen and (max-width: 600px) {
+  #text2 {
+    width: 310px;
+  }
+}
 .selectpicker {
 	display: block;
   width: 100%;
@@ -147,4 +165,13 @@ textarea::placeholder {
   background-color: rgb(0, 0, 0, 0.7);
   border: none;
   border-radius: 40px 0px 0px 40px;
+}
+@media screen and (max-width: 600px) {
+  .customer-form .form-group {
+    margin-bottom: 7px;
+  }
+  .form-control-cus {
+    height: 33px;
+    font-size: 14px;
+  }
 }
