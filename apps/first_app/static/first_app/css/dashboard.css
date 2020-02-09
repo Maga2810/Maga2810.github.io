@@ -1,8 +1,50 @@
-.navbar .container-fluid > h1 {
-	color: white;
-	font-size: 23px;
-	float: left;
-	margin-left: 31px;
+#top > h4 {
+  display: none;
+}
+.arrows {
+  display: none;
+}
+.clearfix {
+  overflow: auto;
+}
+
+.col-xs-1 {
+  width: 5% !important;
+  padding-right: 0px;
+  padding-right: 0px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.col-xs-9 {
+  width: 65% !important;
+}
+.col-xs-9 > h3 {
+  color: white;
+  margin-bottom: 0px !important;
+  margin-top: 40px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important; 
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.col-xs-2 {
+  float: right !important;
+  padding-right: 20px !important;
+  padding-top: 25px;
+}
+#exit {
+  margin-top: 0 !important;
+}
+#exit > li > a {
+  color: white;
+  font-size: 20px;
+  border: none; 
+  float: right;
+  padding: 15px;
+  padding-bottom: 0px !important;
+  padding-right: 15px !important;
 }
 #row {
 	background-image: url("/static/first_app/images/gradient2.jpg");
@@ -36,6 +78,37 @@
     margin-bottom: 30px;
     padding-right: 4px;
     padding-left: 4px;
+  }
+  .col-xs-1 {
+    width: 13% !important;
+  }
+  .col-xs-9 {
+    margin-top: 14px !important;
+    margin-left: 15px !important;
+    margin-left: 0px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .col-xs-9 > h3 {
+    margin-top: 45px !important;
+    font-size: 9px; 
+    padding-left: 6px !important;
+  }
+  .col-xs-2 {
+    float: right !important;
+    width: 20% !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+  #exit > li > a {
+    color: white;
+    font-size: 10px;
+    border: none;
+    float: right;
+    padding: 2px;
+    padding-bottom: 0px !important;
+    padding-right: 7px !important;
+    padding-top: 25px;
   }
 }
 
@@ -251,7 +324,7 @@ textarea::placeholder {
   border-radius: 40px 0px 0px 40px;
 }
 
-.col-xs-12 > h1 {
+#no-more-tables > h1 {
 	font-size: 38px;
 	padding-left: 0px; 
 	padding-right: 0px;
@@ -270,14 +343,15 @@ textarea::placeholder {
 }
 
 table {
-	table-layout: fixed;
-	width: 100px;
+	/*table-layout: fixed;
+	width: 100px;*/
 }
 
 td div { 
 	background-color: auto;
   width: auto;
-  /*height: 100px;*/
+  height: 50px;
+  width: 160px;
 	overflow: auto;
 	overflow-x: hidden; 
 }
@@ -285,16 +359,13 @@ td div {
 table thead tr th {
 	text-align: center;
 	color: #a8a8a8;
-	/*font-size: 17px;*/
+	font-size: 17px;
 }
 table tbody tr td {
 	text-align: center;
 	/*font-size: 14px;*/
 	font-weight: bold;
-	/*border-bottom: 1px solid #ddd;*/
-}
-@media screen and (max-width: 600px) {
-  
+	border-bottom: 1px solid #ddd;
 }
 
 ::-webkit-scrollbar {
@@ -319,4 +390,54 @@ table tbody tr td {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #03cffc; 
+}
+
+@media only screen and (max-width: 600px) {
+  
+  /* Force table to not be like tables anymore */
+  #no-more-tables table, 
+  #no-more-tables thead, 
+  #no-more-tables tbody, 
+  #no-more-tables th, 
+  #no-more-tables td, 
+  #no-more-tables tr { 
+    display: block; 
+  }
+ 
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+ 
+  #no-more-tables tr { border: 1px solid #ccc; }
+ 
+  #no-more-tables td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    white-space: normal;
+    text-align:left;
+  }
+ 
+  #no-more-tables td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+ 
+  /*
+  Label the data
+  */
+  #no-more-tables td:before { content: attr(data-title); }
 }

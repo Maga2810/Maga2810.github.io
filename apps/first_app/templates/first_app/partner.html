@@ -18,72 +18,76 @@
 </head>
 <body>
 {% include "first_app/hat.html" %}
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border: none; background-color:rgba(0, 0, 0, 0.4); margin-bottom: 0%;">
+<nav class="navbar navbar-inverse" data-spy="affix">
   <div class="container-fluid">
-    {% include "first_app/navigation.html" %}
-	  {% include "first_app/exiticon.html" %}
+  	<div class="row">
+		  <div class="col-xs-1">
+				{% include "first_app/navigation.html" %}
+			</div>
+			<div class="col-xs-9">
+				<h3>Личный кабинет {{par.partner.alias}}</h3>
+			</div>
+			<div class="col-xs-2">
+			  {% include "first_app/exiticon.html" %}
+			</div>
+		</div>
 	</div>
 </nav>
 
 <div class="container-fluid upper">
 	<div class="row">
 		<div class="col-xs-12">
-				<h2 style="font-size: 40px; color: red;">{{par.partner.alias}}</h2>
-				<h2>{{par.partner.license}}</h2>
-				<h2><a href="tel:{{par.partner.phone}}">{{par.partner.phone}}</a></h2>
-				<h2><a href="#">{{par.partner.user.email}}</a></h2>
+			<h2 style="font-size: 40px; color: red;">{{par.partner.alias}}</h2>
+			<h2>{{par.partner.license}}</h2>
+			<h2><a href="tel:{{par.partner.phone}}">{{par.partner.phone}}</a></h2>
+			<h2><a href="#">{{par.partner.user.email}}</a></h2>
 		</div>
 	</div>
 </div>
 
 <div class="container-fluid lower">
-	<div class="row">
-		<div class="col-xs-12">
-			<h1 style="background-color: black">Заказы: </h1>
-			<table style="margin-bottom: 0px;" class="table table-striped">
-				<thead class="thead-dark">
-					<tr style="background-color: black;">
-						<th width="72px">#</th>
-						<th>Дата заказа</th>
-						<th>Название</th>
-						<th>Категория</th>
-						<th width="72px">Кол.во</th>
-						<th width="60px">Год</th>
-						<th width="90px">Бренд</th>
-						<th width="95px">Модель</th>
-						<th>Номер</th>
-						<th>Ссылка</th>
-						<th>Пункт Назначения</th>
-						<th>Пометки</th>
-						<th width="90px"></th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for o in par_orders %}
-					<tr style="width: 100%; height: auto;">
-						<td class="count"></td>
-						<td>{{o.created_at}}</td>
-						<td>{{o.title}}</td>
-						<td>{{o.category}}</td>
-						<td>{{o.quantity}}</td>
-						<td>{{o.year}}</td>
-						<td>{{o.brand}}</td>
-						<td>{{o.model}}</td>
-						<td><div>{{o.serial}}</div></td>
-						<td><div><a href="{{o.link}}">{{o.link}}</a></div></td>
-						<td>{{o.location}}</td>
-						<td><div>{{o.notes}}</div></td>
-						<td><a href="/delete_order_by_superuser/{{o.id}}">Удалить</a></td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-
-		</div>
-	</div>
+	<section id="no-more-tables">
+		<h1 style="background-color: black">Заказы: </h1>
+		<table style="margin-bottom: 0px;" class="table table-striped">
+			<thead class="thead-dark">
+				<tr style="background-color: black;">
+					<th>#</th>
+					<th>Дата заказа</th>
+					<th>Название</th>
+					<th>Категория</th>
+					<th>Кол.во</th>
+					<th>Год</th>
+					<th>Бренд</th>
+					<th>Модель</th>
+					<th>Номер</th>
+					<th>Ссылка</th>
+					<th>Пункт Назначения</th>
+					<th>Пометки</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for o in par_orders %}
+				<tr style="width: 100%; height: auto;">
+					<td data-title="#" id="number"><div class="count"></div></td>
+					<td data-title="Дата заказа">{{o.created_at}}</td>
+					<td data-title="Название">{{o.title}}</td>
+					<td data-title="Категория">{{o.category}}</td>
+					<td data-title="Кол.во">{{o.quantity}}</td>
+					<td data-title="Год">{{o.year}}</td>
+					<td data-title="Бренд">{{o.brand}}</td>
+					<td data-title="Модель">{{o.model}}</td>
+					<td data-title="Номер"><div>{{o.serial}}</div></td>
+					<td data-title="Ссылка"><div><a href="{{o.link}}">Перейти</a></div></td>
+					<td data-title="Отправка">{{o.location}}</td>
+					<td data-title="Пометки"><div>{{o.notes}}</div></td>
+					<td><a href="/delete_order_by_superuser/{{o.id}}">Удалить</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</section>
 </div>
-
 {% include "first_app/footer.html" %}
-
 </body>
 </html>

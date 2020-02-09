@@ -1,58 +1,203 @@
-
-                /*BRAND & AFFIX*/
+            /*---- BRAND & AFFIX ----*/
 #top {
-  height: 271px;
+  height: 310px;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  margin-bottom: -55px; 
+  margin-bottom: -80px; 
   background-image: url("/static/first_app/images/affix/night_road2.jpg");
-  background-position: initial; 
+  background-position: center; 
 }
-
+/*bahnschrift light*/
+/*century gothic*/
+/*ink free*/
+/*microsoft yi baiti */
+.affix {
+  /*position: fixed;*/
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  
+}
 #top > h1 {
   color: white;
-  font-size: 75px;
-  padding: 15px 15px;
-  font-family: century gothic;
-  font-weight: 900;
+  font-size: 70px;
+  padding: 15px 55px;
+  font-family: Century Gothic, sans-serif;
+  font-weight: 800;
   border: none; 
   margin: auto;
   margin-left: 5%;
-  /*border-bottom: 1px solid white;*/
+  border-bottom: 1px solid white;
+  margin-right: 50%
 }
+#top > h4 {
+  color: red;
+  text-align: end;
+  margin-right: 3%;
+}
+#top > p {
+  padding-left: 28%;
+  font-family: bahnschrift light;
+  padding-top: 12px;
+  font-size: 18px;
+  color: white;
+}
+.col-xs-1 {
+  float: right;
+  padding-right: 0px;
+  padding-right: 0px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.col-xs-9 {
+  float: right !important;
+  width: 64% !important;
+  padding-right: 15px;
+  padding-top: 25px;
+}
+.col-xs-2 {
+  width: 53% !important;
+  float: right !important;
+}
+#burger {
+  font-size: 45px;
+  cursor: pointer;
+  color: white;
+  padding-left: 5px;
+}
+                  /*---- ARROWS ----*/
+.arrows {
+  position: absolute;
+  left: 94%;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+}
+.arrows:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 5px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.9);
+  transform: translate(5px, 20px) rotate(-45deg);
+  animation: arrows 1.5s linear infinite;
+}
+.arrows:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 5px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.9);
+  transform: translate(10px, 0px) rotate(-45deg);
+  animation: arrows 1.5s linear infinite -0.75s;
+}
+@keyframes arrows {
+  0% {
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transform: translate(-2.5px, -10px) rotate(-45deg);
+  }
+  10%, 90% {
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  50% {
+    border-left: 5px solid rgba(255, 255, 255, 0.9);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.9);
+    transform: translate(-2.5px, 0px) rotate(-45deg);
+  }
+  100% {
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transform: translate(-2.5px, 10px) rotate(-45deg);
+  }
+}
+                  /*---- ARROWS END ----*/  
 
 @media screen and (max-width: 1024px) {
   #top > h1 {
     font-size: 70px;
     padding-top: 22px;
     text-align: center;
+    padding-right: 40px;
   }
 }
-
+                /*---- CELL PHONES ----*/
 @media screen and (max-width: 600px) {
+  #top {
+    width: 100%;
+    height: 80px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: -80px;
+    background-image: url(/static/first_app/images/affix/night_road2.jpg);
+    background-position: unset;
+  }
   #top > h1 {
+    padding: 0px 10px;
     font-size: 30px;
+    padding-top: 3px;
+    margin-right: 20px;
+    border-bottom: none;
+  }
+  #top > p {
+    display: none;
+  }
+  #top > h4 {
+    font-size: 8px;
+    margin-top: 30px;
+    margin-right: 65px;
+    font-weight: 600;
+  }
+  .arrows {
+    display: none;
+  }
+  .col-xs-1 {
+    padding-left: 9px !important;
+    padding-right: 0px !important;
+  }
+  #burger {
+    font-size: 35px !important;
+    padding-left: 0px;
+  }
+  #right {
+    margin-top: 0 !important;
+  }
+  #right > li > a {
+    font-size: 12px;
+    border: none; 
+    float: right;
+    margin-top: 0px !important;
+    padding: 15px;
+    padding-bottom: 0px !important;
+    padding-right: 0px !important;
+  }
+  .navbar-nav {
+    width: 100% !important;
+    margin-top: 16px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 }
-.navbar {
+              /*---- CELL PHONES END ----*/
+.navbar-inverse {
+  position: sticky !important;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.4) !important;
   margin: 0px 0px !important;
   border-radius: 0px !important;
+  margin-bottom: 0px !important;
+  border: none !important;
 }
-/*bahnschrift light
-century gothic
-ink free
-microsoft yi baiti */
-.affix {
-  top: 0;
-  width: 100%;
-  z-index: 9999 !important;
-  transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
-}
-.affix + .container-fluid {
-  /*padding-top: 70px;*/
-  position: relative;
-}
+/*.affix + .container-fluid {
+  position: absolute;
+  top: 50px;
+}*/
 .container-fluid {
   padding-right: 0px !important;
   padding-left: 0px !important;
@@ -61,44 +206,14 @@ microsoft yi baiti */
 }
 #right > li > a {
   color: white;
-  font-size: 19px;
+  font-size: 20px;
 }
 @media screen and (max-width: 1024px) {
   #right > li > a {
     font-size: 17px;
   }
 }
-              /*CELL PHONES*/
-@media screen and (max-width: 600px) {
-  #right {
-    margin-top: 0 !important;
-  }
-  #right > li > a {
-    font-size: 10px;
-    border: none; 
-    float: right;
-    margin-top: -37px !important;
-  }
-  
-  #top {
-    width: 100%;
-    height: 93px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-bottom: -92px;
-    background-image: url(/static/first_app/images/affix/night_road2.jpg);
-    background-position: unset;
-  }
-  .navbar-nav {
-    width: 100% !important;
-    margin-top: 33px !important;
-    margin-bottom: 0px !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-  }
-}
-
-              /*OVERLAY*/
+                      /*OVERLAY*/
 .overlay {
   height: 0%;
   width: 100%;
@@ -106,7 +221,6 @@ microsoft yi baiti */
   z-index: 1;
   top: 0;
   left: 0;
-  
   background-color: rgba(0,0,0, 0.9);
   overflow-y: auto;
   transition: 0.5s;
@@ -145,7 +259,7 @@ microsoft yi baiti */
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 99999;
   top: 0;
   left: 0;
   background-color: rgba(0,0,0, 0.9);
@@ -177,8 +291,13 @@ microsoft yi baiti */
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+    /*z-index: 99999;*/
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
              /*SIDENAV END*/
 /*.underline {
@@ -199,7 +318,7 @@ html {
   /*padding: 10px 536px;*/
   text-align: center;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 600px) {
   .column {
     width: 200px;
     display: block;

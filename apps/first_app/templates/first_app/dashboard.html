@@ -17,14 +17,25 @@
 	<script src="static/first_app/js/faradenza.js"></script>
 </head>
 <body>
-	{% include "first_app/hat.html" %}
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border: none; background-color: rgba(0, 0, 0, 0.4); margin-bottom: 0%;">
-  <div class="container-fluid">
-    {% include "first_app/navigation.html" %}
-	    <!-- <h1 style="font-size: 13px; width: 600px;">{{user.partner.alias}}, добро пожаловать в личный кабинет!</h1> -->
-	  {% include "first_app/exiticon.html" %}
+{% include "first_app/hat.html" %}
+<nav class="navbar navbar-inverse" data-spy="affix">
+	<div class="clearfix">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-1">
+					{% include "first_app/navigation.html" %}
+				</div>
+				<div class="col-xs-9">
+					<h3>{{user.partner.alias}}, добро пожаловать в личный кабинет!</h3>
+				</div>
+				<div class="col-xs-2">
+				  {% include "first_app/exiticon.html" %}
+				</div>
+			</div>
+		</div>
 	</div>
 </nav>
+
 <div class="container-fluid">
 	<div class="row" id="row">
 		<div class="col-sm-6" id="left-col">
@@ -114,7 +125,7 @@
 				</form>
 			</div>
 		</div>
-
+		<!-- <div class="clearfix"> -->
 		<div class="col-sm-6" id="right-col">
 			<div class="col-xs-12" id="upper_title">
 				<h1>Площадки выбора транспортных средств:</h1>	
@@ -183,60 +194,53 @@
         	<img class="img-icons" style="width: 110%"; src="static/first_app/images/parts_sites/craig.png"></a>
         </div>
 			</div>	
-
 		</div>
+	<!-- </div> -->
 	</div>
 </div>
 
 <div class="container-fluid" style="width: 100%;">
-	<div class="row">
-		<div class="col-xs-12" style="padding-left: 0px; padding-right: 0px;">
-			<h1 style="background-color: black">Мои заказы: </h1>
-			<div class="table-responsive">
+	<section id="no-more-tables">
+		<h1 style="background-color: black; padding-bottom: 15px; padding-top: 12px;">Мои заказы: </h1>
+		<div class="table-responsive" style="margin-bottom: 0px;">
 			<table style="margin-bottom: 0px;" class="table table-striped">
 				<thead class="thead-dark">
 					<tr style="background-color: black;">
-						<th class="col-xs-1">Название</th>
-						<th class="col-xs-1">Категория</th>
-						<th class="col-xs-1">Кол.во</th> <!-- width="72px" -->
-						<th class="col-xs-1">Год</th> <!-- width="60px" -->
-						<th class="col-xs-1">Бренд</th> <!-- width="90px" -->
-						<th class="col-xs-1">Модель</th> <!-- width="95px" -->
-						<th class="col-xs-1">Номер</th>
-						<th class="col-xs-1">Ссылка</th>
-						<th class="col-xs-1">Отправка</th>
-						<th class="col-xs-1">Пометки</th>
-						<th class="col-xs-2"></th> <!-- width="90px" -->
+						<th>Название</th>
+						<th>Категория</th>
+						<th>Кол.во</th> 
+						<th>Год</th> 
+						<th>Бренд</th> 
+						<th>Модель</th> 
+						<th>Номер</th>
+						<th>Ссылка</th>
+						<th>Отправка</th>
+						<th>Пометки</th>
+						<th></th> 
 					</tr>
 				</thead>
-				
 				<tbody>
 					{% for o in my_orders %}
-					<tr style="width: 100%; height: auto;">
-						<td class="col-xs-1">{{o.title}}</td>
-						<td class="col-xs-1">{{o.category}}</td>
-						<td class="col-xs-1">{{o.quantity}}</td>
-						<td class="col-xs-1">{{o.year}}</td>
-						<td class="col-xs-1">{{o.brand}}</td>
-						<td class="col-xs-1">{{o.model}}</td>
-						<td class="col-xs-1"><div>{{o.serial}}</div></td>
-						<td class="col-xs-1"><div><a href="{{o.link}}">{{o.link}}</a></div></td>
-						<td class="col-xs-1">{{o.location}}</td>
-						<td class="col-xs-1"><div>{{o.notes}}</div></td>
-						<td class="col-xs-1"><a href="/delete_order/{{o.id}}">Удалить</a></td>
+					<tr>
+						<td data-title="Название">{{o.title}}</td>
+						<td data-title="Категория">{{o.category}}</td>
+						<td data-title="Кол.во">{{o.quantity}}</td>
+						<td data-title="Год">{{o.year}}</td>
+						<td data-title="Бренд">{{o.brand}}</td>
+						<td data-title="Модель">{{o.model}}</td>
+						<td data-title="Номер"><div>{{o.serial}}</div></td>
+						<td data-title="Ссылка"><div><a href="{{o.link}}">Перейти</a></div></td>
+						<td data-title="Отправка">{{o.location}}</td>
+						<td data-title="Пометки"><div>{{o.notes}}</div></td>
+						<td><a href="/delete_order/{{o.id}}">Удалить</a></td>
 					</tr>
 					{% endfor %}
 				</tbody>
-				
 			</table>
 		</div>
-		</div>
-	</div>
+	</section>	
 </div>
 
-<div class="container-fluid" style="width: 100%;">
-
-</div>
 {% include "first_app/countries.html" %}                 
 {% include "first_app/footer.html" %}
 </body>

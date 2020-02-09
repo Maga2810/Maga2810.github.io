@@ -1,5 +1,5 @@
 footer {
-  padding: 35px;
+  padding: 25px;
 }
 .scl-btn {
   padding: 15px;
@@ -7,7 +7,7 @@ footer {
   width: 55px;
   text-align: center;
   text-decoration: none;
-  margin:5px;
+  margin: 5px;
   color: white;
 }
 .scl-btn:hover {
@@ -47,15 +47,15 @@ footer {
     margin-top: 20px;
   }
   .scl-btn {
-    padding: 12px;
-    font-size: 26px;
-    width: 50px;
+    padding: 11px;
+    font-size: 23px;
+    width: 47px;
     text-align: center;
     text-decoration: none;
-    margin: 6px;
-    color: white;
+    margin: 5px;
+    color: white
   }
   .text {
-    height: 220px;
+    height: 200px;
   }
 }

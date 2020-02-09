@@ -1,5 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NAVIGATION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 <ul class="nav navbar-nav">
-  <span id="hui" style="font-size:39px;cursor:pointer; color: white; padding-left: 11px;" onclick="openBurger()">&#9776;</span>
+  <span id="burger" onclick="openBurger()">&#9776;</span>
   <div id="myBurger" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeBurger()">&times;</a>
     <a href="#" onclick="openUs()">Кто мы</a>
@@ -47,7 +55,7 @@
 </ul>
                           <!-- CONTACTS WHITE MODAL -->
 <div class="modal fade" id="showCont" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog"  style="background-color: black;">
     <!-- Modal content-->
     <div class="modal-content" style="background-color: black;">
       <div class="modal-header">
@@ -77,3 +85,6 @@
     </div>
   </div>
 </div>
+
+</body>
+</html>

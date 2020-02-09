@@ -15,7 +15,13 @@ $(document).ready(function(){
   $("#kazModal").click(function(){
     $("#kaModal").modal({backdrop: true});
   });
-      
+  
+  // $("#myCarousel").swiperight(function() {
+  //   $(this).carousel('prev');
+  // });
+  // $("#myCarousel").swipeleft(function() {
+  //   $(this).carousel('next');
+  // });   
        
 }); 
     // Hamburger Button   
@@ -37,7 +43,7 @@ function closeUs() {
 
 $("body, html").click(function(event){
   console.log(event.target)
-  if (event.target.id != "hui"){
+  if (event.target.id != "burger"){
     closeBurger();
   }
 })
