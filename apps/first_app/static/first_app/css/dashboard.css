@@ -5,7 +5,7 @@
   display: none;
 }
 .clearfix {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .col-xs-1 {
@@ -21,7 +21,7 @@
 .col-xs-9 > h3 {
   color: white;
   margin-bottom: 0px !important;
-  margin-top: 40px !important;
+  margin-top: 15px !important;
   margin-left: 0px !important;
   margin-right: 0px !important;
   padding-right: 0px !important;
@@ -51,33 +51,23 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-#left-col {
-  margin-top: 0px;
-  margin-bottom: 40px;
+.col-lg-6 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 #right-col {
 	background-image: url("/static/first_app/images/noir/synt4.jpg");
 	background-position: center;
  	background-size: cover;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
-	border-radius: 16px;
-	width: 47%;
-	height: 900px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+	border-radius: 15px;
+	padding: 10px;
+  padding-bottom: 50px;
 }
+
 @media screen and (max-width: 600px) {
-  #right-col {
-    width: 100%;
-    height: 720px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-  #left-col {
-    margin-top: -2px;
-    margin-bottom: 30px;
-    padding-right: 4px;
-    padding-left: 4px;
+  .col-xs-12 {
+    padding: 15px !important;
   }
   .col-xs-1 {
     width: 13% !important;
@@ -116,12 +106,9 @@
 	font-size: 22px;
 	color: white;
 }
-#upper_title {
-	width: 100%;
-	padding-right: 0px;
-}
+
 #upper_title > h1 {
-	font-size: 24px;
+	font-size: 25px;
 	color: white;
   font-weight: bold;
   font-family: century gothic;
@@ -129,30 +116,14 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-#lower_title {
-	width: 100%;
-	padding-right: 0px;
-}
 #lower_title > h1 {
 	font-size: 30px;
 	color: white;
 	font-weight: bold;
 	font-family: century gothic;
-  margin-bottom: 20px;
-
-}
-#cars {
-	width: 100%;
-	margin: 0px;
-	padding: 15px;
-}
-#parts {
-	width: 100%;
-	height: auto;
-	padding-left: 0px;
-	padding-right: 5px;
-	margin-bottom: 20px;
-	padding: 15px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .img-icons {
   cursor: pointer;
@@ -163,22 +134,17 @@
   opacity: 0.5;
 }
 
-/*ORDER FORM*/
+                  /*ORDER FORM*/
 .form-control, .form-control:focus, .input-group-addon {
-  border-color: red;
+  
 }
 .form-control, .btn {
   border-radius: 2px;
 }
 .order-form {
-  width: 92%;
-  margin: auto;
-  margin-top: 6%;
-  
 }
 .order-form form {
-	height: 900px;
-  border-radius: 14px;
+  border-radius: 15px;
   background-image: url("/static/first_app/images/noir/p2.jpg");
   background-position: center;
   background-size: cover;
@@ -189,21 +155,28 @@
 	color: white;
   font-weight: bold;
   font-family: century gothic;
-  margin-top: 7px;
   margin-bottom: 50px;
   text-align: center;
+}
+#r {
+  padding-right: 30px;
+}
+#l {
+  padding-left: 30px;
 }
 @media screen and (max-width: 600px) {
   .order-form h2 {
     color: white;
     font-weight: bold;
     font-family: century gothic;
-    margin-top: 0px;
-    margin-bottom: 20px;
     text-align: center;
   }
   .order-form form {
-    padding: 25px;
+    padding-top: 28px;
+    padding: 15px;
+  }
+  .order-form .btn {
+    width: 50% !important;
   }
 }
 
@@ -223,7 +196,6 @@
   font-size: 13px;
 }
 .order-form .form-control {
-  min-height: 38px;
   box-shadow: none !important;
 
 } 
@@ -232,16 +204,14 @@
   text-align: center;
 }
  
-.order-form .btn{        
+.order-form .btn {
   font-size: 16px;
   font-weight: bold;
   background: rgb(26,127,135);
   background: radial-gradient(circle, rgba(26,127,135,1) 0%, rgba(72,72,176,1) 47%, rgba(255,26,193,1) 100%);
   border: 1px;
   border-radius: 17px;
-  width: 200px;
-  left: 23%;
-  position: absolute;
+  width: 25%;
 }
 .order-form .btn:hover, .signup-form .btn:focus {
   background: #ef1b75;
@@ -279,21 +249,17 @@
   border-radius: 0px 20px 20px 0px;
   padding-left: 6px;
 }
-#text1 {
+.form-group > textarea {
 	background-color: rgb(0, 0, 0, 0.7);
 	border-radius: 17px;
 	border: none;
 	padding-left: 6px;
-	width: 592px;
-  height: 170px;
+	color: white;
+  font-size: 17px;
   resize: none;
 }
-@media screen and (max-width: 600px) {
-  #text1 {
-    width: 148%;
-  }
-}
-textarea::placeholder {
+
+.form-group > textarea::placeholder {
 	font-size: 16px;
   color: white;
 }
@@ -334,12 +300,6 @@ textarea::placeholder {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
-}
-@media screen and (max-width: 600px) {
-  .col-xs-12 > h1 {
-    padding-top: 22px;
-    font-size: 32px
-  }
 }
 
 table {
@@ -435,9 +395,9 @@ table tbody tr td {
     text-align:left;
     font-weight: bold;
   }
- 
-  /*
-  Label the data
-  */
+  .table-responsive {
+    border: none !important;
+  }
+
   #no-more-tables td:before { content: attr(data-title); }
 }

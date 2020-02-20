@@ -38,7 +38,7 @@
 
 <div class="container-fluid">
 	<div class="row" id="row">
-		<div class="col-sm-6" id="left-col">
+		<div class="col-xs-12 col-lg-6" id="l">
 			<div class="order-form">
 				<form action="/make_order" method="post">
 					{% csrf_token %}
@@ -114,90 +114,93 @@
           </div>
 
           <div class="form-group">
-            <div class="input-group">
-							<textarea id="text1" wrap="hard" style="font-size: 17px; color: white" name="notes" placeholder="  Задайте нам любой вопрос!"></textarea>
-						</div>
+							<textarea class="form-control" rows="6" wrap="hard" name="notes" placeholder="  Задайте нам любой вопрос!"></textarea>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group" style="text-align: center;">
             <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
           </div>
 				</form>
 			</div>
 		</div>
-		<!-- <div class="clearfix"> -->
-		<div class="col-sm-6" id="right-col">
-			<div class="col-xs-12" id="upper_title">
-				<h1>Площадки выбора транспортных средств:</h1>	
-			</div>
-			<div class="col-xs-12" id="cars">
-				<div class="col-xs-4">
-					<a href="https://www.cars.com/">
-					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/car_sites/cars.png"></a>
-					<a href="https://www.cargurus.com/">
-					<img class="img-icons" style="width: 85%" ; src="static/first_app/images/car_sites/cg.png"></a>
-					<a href="https://www.iaai.com/ru-ru/">
-					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/car_sites/iaai.png"></a>
-					<a href="https://www.manheim.com/">
-					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/car_sites/manheim.png"></a>
-        </div>
-
-        <div class="col-xs-4">
-        	<a href="https://losangeles.craigslist.org/d/cars-trucks/search/cta">
-        	<img class="img-icons" style="width: 105%"; src="static/first_app/images/car_sites/craig.png"></a>
-        	<a href="http://www.opgla.com/auction/auction.aspx">
-					<img class="img-icons" style="width: 50%" ; src="static/first_app/images/car_sites/opg.png"></a>
-					<a href="https://www.govplanet.eu/">
-					<img class="img-icons" style="width: 100%" ; src="static/first_app/images/car_sites/gp.png"></a>
-					<a href="https://www.auctiontime.com/">
-					<img class="img-icons" style="width: 95%"; src="static/first_app/images/car_sites/time1.png"></a>
+		
+		<div class="col-xs-12 col-lg-6" id="r">
+			<div class="clearfix" id="right-col">
+				<div id="upper_title">
+					<h1>Площадки выбора транспортных средств:</h1>
 				</div>
 
-				<div class="col-xs-4">
-					<a href="https://www.copart.com/ru/">
-					<img class="img-icons" style="width: 90%"; src="static/first_app/images/car_sites/copart.png"></a>
-					<a href="https://www.crashedtoys.com/">
-					<img class="img-icons" style="width: 90%"; src="static/first_app/images/car_sites/ct1.png"></a>
-					<a href="https://www.richmondaa.com/">
-					<img class="img-icons" style="width: 60%"; src="static/first_app/images/car_sites/richmond.png"></a>
-					<a href="https://www.driveautoauctions.com/">
-					<img class="img-icons" style="width: 100%" ; src="static/first_app/images/car_sites/daa.png"></a>
-				</div>
-			</div>
+				<div class="row" id="cars">
+					<div class="col-xs-4">
+						<a href="https://www.cars.com/">
+						<img class="img-icons" style="width: 70%" ; src="static/first_app/images/car_sites/cars.png"></a>
+						<a href="https://www.cargurus.com/">
+						<img class="img-icons" style="width: 70%" ; src="static/first_app/images/car_sites/cg.png"></a>
+						<a href="https://www.iaai.com/ru-ru/">
+						<img class="img-icons" style="width: 65%" ; src="static/first_app/images/car_sites/iaai.png"></a>
+						<a href="https://www.manheim.com/">
+						<img class="img-icons" style="width: 70%" ; src="static/first_app/images/car_sites/manheim.png"></a>
+	        </div>
 
-			<div class="col-xs-12" id="lower_title">
-				<h1>Площадки выбора запчастей:</h1>			
+	        <div class="col-xs-4">
+	        	<a href="https://losangeles.craigslist.org/d/cars-trucks/search/cta">
+	        	<img class="img-icons" style="width: 95%"; src="static/first_app/images/car_sites/craig.png"></a>
+	        	<a href="http://www.opgla.com/auction/auction.aspx">
+						<img class="img-icons" style="width: 40%" ; src="static/first_app/images/car_sites/opg.png"></a>
+						<a href="https://www.govplanet.eu/">
+						<img class="img-icons" style="width: 80%" ; src="static/first_app/images/car_sites/gp.png"></a>
+						<a href="https://www.auctiontime.com/">
+						<img class="img-icons" style="width: 85%"; src="static/first_app/images/car_sites/time1.png"></a>
+					</div>
+
+					<div class="col-xs-4">
+						<a href="https://www.copart.com/ru/">
+						<img class="img-icons" style="width: 75%"; src="static/first_app/images/car_sites/copart.png"></a>
+						<a href="https://www.crashedtoys.com/">
+						<img class="img-icons" style="width: 75%"; src="static/first_app/images/car_sites/ct1.png"></a>
+						<a href="https://www.richmondaa.com/">
+						<img class="img-icons" style="width: 50%"; src="static/first_app/images/car_sites/richmond.png"></a>
+						<a href="https://www.driveautoauctions.com/">
+						<img class="img-icons" style="width: 85%" ; src="static/first_app/images/car_sites/daa.png"></a>
+					</div>
+				</div>
+
+				<div id="lower_title">
+					<h1>Площадки выбора запчастей:</h1>			
+				</div>
+
+				<div class="row" id="parts">
+					<div class="col-xs-4">
+						<a href="https://www.usautoparts.com/">
+						<img class="img-icons" style="width: 80%" ; src="static/first_app/images/parts_sites/us-auto.png"></a>
+	        	<a href="https://www.ebay.com/b/Auto-Parts-Accessories/6028/bn_569479">
+						<img class="img-icons" style="width: 65%" ; src="static/first_app/images/parts_sites/ebay.png"></a>
+						<a href="http://www.carid.com/auto-parts.html">
+						<img class="img-icons" style="width: 80%" ; src="static/first_app/images/parts_sites/carid.png"></a>
+	        </div>
+	        <div class="col-xs-4">
+	        	<a href="https://www.autozone.com">
+						<img class="img-icons" style="width: 65%" ; src="static/first_app/images/parts_sites/autozone.png"></a>
+						<a href="http://www.car-part.com/">
+						<img class="img-icons" style="width: 90%" ; src="static/first_app/images/parts_sites/car-part.png"></a>
+	        	<a href="https://www.rockauto.com/">
+						<img class="img-icons" style="width: 70%" ; src="static/first_app/images/parts_sites/rock.png"></a>
+	        </div>
+	        <div class="col-xs-4">
+	        	<a href="https://www.amazon.com/automotive-auto-truck-replacements-parts/b?ie=UTF8&node=15684181&tag=googhydr-20&hvadid=223646216809&hvpos=1t1&hvexid=&hvnetw=g&hvrand=9689631577562816335&hvpone=&hvptwo=&hvqmt=b&hvdev=c&ref=pd_sl_528uvf94mx_b&hvtargid=aud-649564993678:kwd-649787178421">
+						<img class="img-icons" style="width: 75%" ; src="static/first_app/images/parts_sites/amazon.png"></a>
+						<a href="https://www.usautoparts.com/">
+						<img class="img-icons" style="width: 75%" ; src="static/first_app/images/parts_sites/oreilly1.png"></a>
+	        	<a href="https://losangeles.craigslist.org/d/auto-parts/search/pta">
+	        	<img class="img-icons" style="width: 95%"; src="static/first_app/images/parts_sites/craig.png"></a>
+	        </div>
+				</div>
+
 			</div>
-			<div class="col-xs-12" id="parts">
-				<div class="col-xs-4">
-					<a href="https://www.usautoparts.com/">
-					<img class="img-icons" style="width: 95%" ; src="static/first_app/images/parts_sites/us-auto.png"></a>
-        	<a href="https://www.ebay.com/b/Auto-Parts-Accessories/6028/bn_569479">
-					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/parts_sites/ebay.png"></a>
-					<a href="http://www.carid.com/auto-parts.html">
-					<img class="img-icons" style="width: 95%" ; src="static/first_app/images/parts_sites/carid.png"></a>
-        </div>
-        <div class="col-xs-4">
-        	<a href="https://www.autozone.com">
-					<img class="img-icons" style="width: 80%" ; src="static/first_app/images/parts_sites/autozone.png"></a>
-					<a href="http://www.car-part.com/">
-					<img class="img-icons" style="width: 100%" ; src="static/first_app/images/parts_sites/car-part.png"></a>
-        	<a href="https://www.rockauto.com/">
-					<img class="img-icons" style="width: 85%" ; src="static/first_app/images/parts_sites/rock.png"></a>
-        </div>
-        <div class="col-xs-4">
-        	<a href="https://www.amazon.com/automotive-auto-truck-replacements-parts/b?ie=UTF8&node=15684181&tag=googhydr-20&hvadid=223646216809&hvpos=1t1&hvexid=&hvnetw=g&hvrand=9689631577562816335&hvpone=&hvptwo=&hvqmt=b&hvdev=c&ref=pd_sl_528uvf94mx_b&hvtargid=aud-649564993678:kwd-649787178421">
-					<img class="img-icons" style="width: 90%" ; src="static/first_app/images/parts_sites/amazon.png"></a>
-					<a href="https://www.usautoparts.com/">
-					<img class="img-icons" style="width: 95%" ; src="static/first_app/images/parts_sites/oreilly1.png"></a>
-        	<a href="https://losangeles.craigslist.org/d/auto-parts/search/pta">
-        	<img class="img-icons" style="width: 110%"; src="static/first_app/images/parts_sites/craig.png"></a>
-        </div>
-			</div>	
+		
 		</div>
-	<!-- </div> -->
-	</div>
-</div>
+	</div>	<!-- row -->
+</div>	<!-- container-fluid -->
 
 <div class="container-fluid" style="width: 100%;">
 	<section id="no-more-tables">

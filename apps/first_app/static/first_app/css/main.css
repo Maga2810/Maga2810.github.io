@@ -12,10 +12,10 @@
 /*ink free*/
 /*microsoft yi baiti */
 .affix {
-  /*position: fixed;*/
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999 !important;
+  z-index: 1 !important;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   
@@ -44,22 +44,14 @@
   font-size: 18px;
   color: white;
 }
-.col-xs-1 {
-  float: right;
+.col-xs-3 {
   padding-right: 0px;
   padding-right: 0px;
   padding-left: 15px;
   padding-top: 10px;
 }
 .col-xs-9 {
-  float: right !important;
-  width: 64% !important;
-  padding-right: 15px;
   padding-top: 25px;
-}
-.col-xs-2 {
-  width: 53% !important;
-  float: right !important;
 }
 #burger {
   font-size: 45px;
@@ -119,11 +111,29 @@
                   /*---- ARROWS END ----*/  
 
 @media screen and (max-width: 1024px) {
+  #top {
+    height: 214px;
+  }
   #top > h1 {
-    font-size: 70px;
-    padding-top: 22px;
+    font-size: 40px;
+    padding-top: 15px;
     text-align: center;
     padding-right: 40px;
+    margin-right: 42%;
+  }
+  #top > p {
+    font-size: 14px;
+    padding-left: 19%;
+  }
+  #top > h4 {
+    font-size: 14px;
+    margin-right: 8%;
+  }
+  #right > li > a {
+    font-size: 17px;
+  }
+  .arrows {
+    left: 87%;
   }
 }
                 /*---- CELL PHONES ----*/
@@ -141,40 +151,46 @@
     padding: 0px 10px;
     font-size: 30px;
     padding-top: 3px;
-    margin-right: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
     border-bottom: none;
+    text-align: center;
   }
   #top > p {
     display: none;
   }
   #top > h4 {
-    font-size: 8px;
-    margin-top: 30px;
-    margin-right: 65px;
+    font-size: 9px;
+    margin-top: 32px;
+    margin-right: 55px;
     font-weight: 600;
   }
   .arrows {
     display: none;
   }
-  .col-xs-1 {
+  .col-xs-3 {
     padding-left: 9px !important;
     padding-right: 0px !important;
   }
   #burger {
     font-size: 35px !important;
     padding-left: 0px;
+    color: white;
+  }
+  .col-xs-9 {
+    padding: 0px !important;
   }
   #right {
     margin-top: 0 !important;
   }
   #right > li > a {
-    font-size: 12px;
-    border: none; 
+    font-size: 12px !important;
+    border: none;
     float: right;
-    margin-top: 0px !important;
-    padding: 15px;
-    padding-bottom: 0px !important;
-    padding-right: 0px !important;
+    margin-top: 44px !important;
+    padding: 5px;
+    padding-bottom: 5px !important;
+    padding-right: 10px !important;
   }
   .navbar-nav {
     width: 100% !important;
@@ -194,10 +210,6 @@
   margin-bottom: 0px !important;
   border: none !important;
 }
-/*.affix + .container-fluid {
-  position: absolute;
-  top: 50px;
-}*/
 .container-fluid {
   padding-right: 0px !important;
   padding-left: 0px !important;
@@ -207,11 +219,6 @@
 #right > li > a {
   color: white;
   font-size: 20px;
-}
-@media screen and (max-width: 1024px) {
-  #right > li > a {
-    font-size: 17px;
-  }
 }
                       /*OVERLAY*/
 .overlay {
@@ -374,15 +381,42 @@ html {
   font-family: century gothic;
   color: white;
 }
+#my-pics > .carousel-indicators {
+  height: 8%;
+}
+#my-pics > .carousel-indicators li {
+  display: inline-block;
+  width: 45px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000\9;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 1px;
+}
+#my-pics > .carousel-indicators .active {
+  background-color: rgba(255, 0, 0, 0.5) !important;
+}
                 /*CELL PHONE*/
 @media screen and (max-width: 600px) {
-  
   .carousel-inner h3 {
     font-size: 24px;
-    /*border-bottom: 1px solid black;*/
   }
   .carousel-inner p {
     font-size: 12px;
+  }
+  #my-pics > .carousel-indicators li {
+    width: 16px;
+    height: 4px;
+    margin: 1px;
+    display: inline-block;
+  }
+  #my-pics > .carousel-indicators {
+    height: 8%;
+    width: 70%;
+    margin-left: -35%;
   }
 }
 
@@ -410,7 +444,7 @@ html {
 .img-responsive-f:hover {
   opacity: 0.5;
 }
-        /*CELL PHONE*/  
+              /*CELL PHONE*/  
 @media screen and (max-width: 600px) {
   .img-responsive-f {
     width: 80%;

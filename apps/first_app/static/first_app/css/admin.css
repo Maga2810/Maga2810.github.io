@@ -140,10 +140,10 @@ table tbody tr td {
   }
   #exit > li > a {
     color: white;
-    font-size: 10px;
+    font-size: 9px;
     border: none;
     float: right;
-    padding: 2px;
+    padding: 1px;
     padding-bottom: 0px !important;
     padding-right: 7px !important;
     padding-top: 25px;
