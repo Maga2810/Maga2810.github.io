@@ -40,6 +40,7 @@ footer {
   background-position: center;
   background-size: cover;
   height: 250px;
+  margin-top: -1px;
 }
                  /*CELL PHONE*/
 @media screen and (max-width: 600px) {
@@ -57,5 +58,10 @@ footer {
   }
   .text {
     height: 200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .text {
+    height: 170px !important;
   }
 }

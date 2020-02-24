@@ -109,17 +109,16 @@
   }
 }
                   /*---- ARROWS END ----*/  
-
 @media screen and (max-width: 1024px) {
   #top {
     height: 214px;
   }
   #top > h1 {
-    font-size: 40px;
+    font-size: 43px;
     padding-top: 15px;
     text-align: center;
     padding-right: 40px;
-    margin-right: 42%;
+    margin-right: 36%;
   }
   #top > p {
     font-size: 14px;
@@ -134,6 +133,19 @@
   }
   .arrows {
     left: 87%;
+  }
+  .carousel-inner h3 {
+    font-size: 50px !important;
+  }
+  .carousel-indicators {
+    width: 72% !important;
+    margin-left: -36% !important;
+  }
+  .title-container h1 {
+    font-size: 34px !important;
+  }
+  .img-responsive-f {
+    width: 75% !important;
   }
 }
                 /*---- CELL PHONES ----*/
@@ -300,7 +312,6 @@
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
-    /*z-index: 99999;*/
   }
   .sidenav a {
     font-size: 18px;
@@ -402,7 +413,7 @@ html {
                 /*CELL PHONE*/
 @media screen and (max-width: 600px) {
   .carousel-inner h3 {
-    font-size: 24px;
+    font-size: 24px !important;
   }
   .carousel-inner p {
     font-size: 12px;

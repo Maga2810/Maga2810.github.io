@@ -11,12 +11,13 @@
 .col-xs-1 {
   width: 5% !important;
   padding-right: 0px;
-  padding-right: 0px;
+  padding-right: 0px !important;
   padding-left: 15px;
   padding-top: 10px;
 }
 .col-xs-9 {
   width: 65% !important;
+  padding-left: 0px !important;
 }
 .col-xs-9 > h3 {
   color: white;
@@ -70,7 +71,7 @@
     padding: 15px !important;
   }
   .col-xs-1 {
-    width: 13% !important;
+    width: 27% !important;
   }
   .col-xs-9 {
     margin-top: 14px !important;
@@ -81,7 +82,7 @@
   }
   .col-xs-9 > h3 {
     margin-top: 45px !important;
-    font-size: 9px; 
+    font-size: 9px !important; 
     padding-left: 6px !important;
   }
   .col-xs-2 {
@@ -90,9 +91,10 @@
     padding-left: 2px !important;
     padding-right: 2px !important;
   }
+
   #exit > li > a {
     color: white;
-    font-size: 10px;
+    font-size: 10px !important;
     border: none;
     float: right;
     padding: 2px;
@@ -100,6 +102,35 @@
     padding-right: 7px !important;
     padding-top: 25px;
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-xs-1 {
+    width: 10% !important;
+  }
+  .col-xs-9 > h3 {
+    font-size: 21px;
+  }
+  .col-xs-2 {
+    width: 17% !important;
+  }
+  #exit > li > a {
+    font-size: 21px;
+    padding: 2px;
+    padding-bottom: 0px !important;
+    padding-right: 15px !important;
+    padding-top: 15px;
+  }
+  #l {
+    padding: 30px;
+  }
+  #r {
+    padding-top: 0px !important;
+    padding: 30px;
+  }
+  /*.form-control-cus {
+    height: 50px !important;
+  }*/
 }
 
 #left-col > h1 {
@@ -298,7 +329,7 @@
 	font-family: "Times New Roman", Times, serif;
   font-style: italic;
   text-align: center;
-  margin-top: 0px;
+  margin-top: -1px;
   margin-bottom: 0px;
 }
 
@@ -311,7 +342,7 @@ td div {
 	background-color: auto;
   width: auto;
   height: 50px;
-  width: 160px;
+  width: auto;
 	overflow: auto;
 	overflow-x: hidden; 
 }
@@ -323,7 +354,6 @@ table thead tr th {
 }
 table tbody tr td {
 	text-align: center;
-	/*font-size: 14px;*/
 	font-weight: bold;
 	border-bottom: 1px solid #ddd;
 }
@@ -331,29 +361,22 @@ table tbody tr td {
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
 	border-radius: 5px;
 	background-color: white;
 }
- 
-
 ::-webkit-scrollbar-thumb {
 	border-radius: 5px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.8);
   background: rgb(26,127,135);
   background: radial-gradient(circle, rgba(26,127,135,1) 0%, rgba(72,72,176,1) 47%, rgba(255,26,193,1) 100%);
 }
-
-
 ::-webkit-scrollbar-thumb:hover {
   background: #03cffc; 
 }
 
-@media only screen and (max-width: 600px) {
-  
+@media only screen and (max-width: 1024px) {
   /* Force table to not be like tables anymore */
   #no-more-tables table, 
   #no-more-tables thead, 
@@ -381,12 +404,11 @@ table tbody tr td {
     padding-left: 50%; 
     white-space: normal;
     text-align:left;
+    font-size: 22px;
   }
  
   #no-more-tables td:before { 
-    /* Now like a table header */
     position: absolute;
-    /* Top/left values mimic padding */
     top: 6px;
     left: 6px;
     width: 45%; 
