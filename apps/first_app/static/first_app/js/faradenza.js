@@ -47,3 +47,4 @@ $("body, html").click(function(event){
     closeBurger();
   }
 })
+

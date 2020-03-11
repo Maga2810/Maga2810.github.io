@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib import messages 
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import get_template
+from django.template import Context
 import bcrypt
 import re
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
@@ -111,6 +115,24 @@ def make_order(request):
 								location=request.POST['location'],\
 								notes=request.POST['notes'],\
 								partner=current_user.partner)
+	htmly = get_template('first_app/order-create.html')
+	d = Context({ 'title': order.title,\
+	 							'category': order.category,\
+	  						'quantity': order.quantity,\
+	   						'year': order.year,\
+	    					'brand': order.brand,\
+	     					'model': order.model,\
+	     					'serial': order.serial,\
+	     					'link': order.link,\
+	     					'location': order.location,\
+	     					'notes': order.notes})
+
+	subject, from_email, to = '{0} created new order'.format(current_user.partner.alias), 'oscarxportservice@gmail.com', 'razor_sb@mail.ru'
+	# text_content = plaintext.render(d)
+	html_content = htmly.render(d)
+	msg = EmailMultiAlternatives(subject, html_content, from_email, [to])
+	msg.attach_alternative(html_content, "text/html")
+	msg.send()
 	return redirect('/dashboard')
 
 def delete_order(request, id):

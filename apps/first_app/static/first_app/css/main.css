@@ -142,7 +142,7 @@
     margin-left: -36% !important;
   }
   .title-container h1 {
-    font-size: 34px !important;
+    font-size: 34px;
   }
   .img-responsive-f {
     width: 75% !important;
@@ -463,6 +463,9 @@ html {
     transition: 0.3s;
     padding: 4px;
   }
+  .title-container h1 {
+    font-size: 20px !important;
+  }
 }
                     /*COUNTRIES TITLE*/
 .title-container {
@@ -477,10 +480,4 @@ html {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   text-align: center;
-}
-                  /*CELL PHONE*/
-@media screen and (max-width: 600px) {
-  .title-container h1 {
-    font-size: 20px;
-  }
 }
