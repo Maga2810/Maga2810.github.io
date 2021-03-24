@@ -1,0 +1,6 @@
+bcrypt==3.1.7
+cffi==1.13.2
+Django==1.10
+django-static-jquery==2.1.4
+pycparser==2.19
+six==1.13.0

@@ -60,7 +60,6 @@ def registration(request):
 									)
 			partner.save()
 
-
 			request.session['message'] = "You are registered"
 			request.session['user_id'] = user.id
 			return redirect('/dashboard')
