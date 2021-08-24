@@ -73,18 +73,26 @@ def user_login(request):
 		messages.error(request, "Please enter your password")
 		return redirect('/')
 	try:
-		user = authenticate(username = request.POST['email'], password = request.POST['password'])
-		if user: 
-			login(request, user)
-			request.session['user_id'] = user.id
-			request.session['message'] = "You are logged in"
-			if user.is_staff: 
-				return redirect('/admin_account')
-			return redirect('/dashboard')
+		print request.POST['email'], request.POST['password']
+		# user = authenticate(username = request.POST['email'], password = request.POST['password'])
+		user = User.objects.get(email=request.POST['email'])
+		if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
+				print "password match"
+				print user
+				login(request, user)
+				request.session['user_id'] = user.id
+				request.session['message'] = "You are logged in"
+				print user.is_staff
+				if user.is_staff:
+					return redirect('/admin_account')
+				return redirect('/dashboard')
 		else:
-			messages.error(request, 'Email or password are incorrect')
-			return redirect('/')
+				print "failed password"
+				print "hui"
+				messages.error(request, 'Email or password are incorrect')
+				return redirect('/')
 	except User.DoesNotExist:
+		print "pizda"
 		messages.error(request, "Email doesn't exist.")
 		return redirect('/')
 
@@ -98,7 +106,7 @@ def dashboard(request):
 	context = {
 		'user': current_user,
 		'my_orders': Order.objects.filter(partner=current_user.partner)
-	}    
+	}
 	return render(request, 'first_app/dashboard.html', context)
 
 def make_order(request):
